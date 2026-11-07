@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="htmlTag">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONEEB GLOBAL | RWA & Commodity Exchange</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">MONEEB <span>GLOBAL</span></div>
+    <div class="header-controls">
+      <span class="company-reg" id="companyReg">مرخص باسم: نهاوند</span>
+      <select class="lang-btn" id="langSelector" onchange="changeLanguage(this.value)">
+        <option value="ar">العربية (AR)</option>
+        <option value="en">English (EN)</option>
+        <option value="tr">Türkçe (TR)</option>
+        <option value="fr">Français (FR)</option>
+        <option value="zh">中文 (ZH)</option>
+        <option value="de">Deutsch (DE)</option>
+        <option value="es">Español (ES)</option>
+      </select>
+    </div>
+  </header>
+  <div class="container">
+    <div class="hero-banner">
+      <h1 id="heroTitle">بورصة المحاصيل والسلع والأصول الحقيقية</h1>
+      <p id="heroDesc">ربط التداول المباشر بعقود ضمان ذكية عبر شبكة Pi Network</p>
+    </div>
+    <div class="filter-bar">
+      <button onclick="filterProducts('all')" class="filter-btn active" id="filterAll">الكل</button>
+      <button onclick="filterProducts('crop')" class="filter-btn" id="filterCrop">محاصيل</button>
+      <button onclick="filterProducts('gold')" class="filter-btn" id="filterGold">ذهب</button>
+    </div>
+    <div class="market-grid" id="marketGrid"></div>
+  </div>
+  <div id="orderModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle">تأكيد الطلب</h2>
+      <div id="modalBody"></div>
+      <label id="qtyLabel">الكمية:</label>
+      <input type="number" id="orderQty" value="1" min="1" onchange="updateTotal()">
+      <div class="total-box"><span id="totalLabel">الإجمالي:</span> <b id="orderTotal">0 Pi</b></div>
+      <button class="btn-trade" id="confirmBtn" onclick="confirmOrder()">تأكيد وإنشاء عقد ضمان</button>
+      <p class="escrow-note" id="escrowNote">⚠️ أموالك ستبقى محجوزة في محفظة الضمان ولن تصل للبائع إلا بعد تأكيد الاستلام.</p>
+    </div>
+  </div>
+  <script src="js/products.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
