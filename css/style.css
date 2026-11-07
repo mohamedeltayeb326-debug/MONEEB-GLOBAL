@@ -1,1 +1,30 @@
-
+:root{--bg-navy:#0a1128;--card-navy:#1c2541;--gold-primary:#d4af37;--gold-hover:#f39c12;--text-light:#f4f5f6;--text-muted:#8d99ae}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI',Tahoma,sans-serif;background:var(--bg-navy);color:var(--text-light)}
+header{background:rgba(10,17,40,.95);border-bottom:2px solid var(--gold-primary);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.logo{font-size:1.5rem;font-weight:900;color:var(--gold-primary)}
+.logo span{color:#fff}
+.header-controls{display:flex;gap:10px;align-items:center}
+.lang-btn{background:var(--card-navy);color:var(--gold-primary);border:1px solid var(--gold-primary);padding:6px 10px;border-radius:6px;cursor:pointer;font-weight:bold}
+.company-reg{font-size:.85rem;color:var(--text-muted)}
+.container{max-width:1200px;margin:2rem auto;padding:0 1rem}
+.hero-banner{text-align:center;padding:2.5rem 1rem;background:linear-gradient(135deg,#1c2541,#0a1128);border-radius:12px;border:1px solid rgba(212,175,55,.3);margin-bottom:2rem}
+.hero-banner h1{color:var(--gold-primary)}
+.filter-bar{display:flex;gap:10px;margin-bottom:1.5rem}
+.filter-btn{background:var(--card-navy);color:#fff;border:1px solid #333;padding:8px 18px;border-radius:20px;cursor:pointer}
+.filter-btn.active{background:var(--gold-primary);color:#000;font-weight:bold}
+.market-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem}
+.crop-card{background:var(--card-navy);border-radius:12px;padding:1.5rem;border:1px solid rgba(255,255,255,.06)}
+.crop-header{display:flex;justify-content:space-between;align-items:center}
+.crop-title{font-size:1.2rem;font-weight:bold}
+.crop-tag{background:rgba(212,175,55,.15);color:var(--gold-primary);padding:3px 8px;border-radius:4px;font-size:.8rem}
+.crop-price{font-size:1.35rem;font-weight:bold;color:var(--gold-primary);margin:1rem 0}
+.seller-info{font-size:.85rem;color:var(--text-muted);margin:8px 0}
+.btn-trade{width:100%;background:var(--gold-primary);color:#0a1128;border:none;padding:.9rem;font-weight:900;border-radius:8px;cursor:pointer;font-size:1rem}
+.btn-trade:hover{background:var(--gold-hover)}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;justify-content:center;align-items:center}
+.modal-content{background:#1c2541;padding:2rem;border-radius:12px;width:90%;max-width:450px;border:1px solid var(--gold-primary);position:relative}
+.close{position:absolute;top:10px;left:15px;font-size:24px;cursor:pointer}
+#orderQty{width:100%;padding:10px;margin:10px 0;border-radius:6px;border:1px solid #444;background:#0a1128;color:#fff}
+.total-box{background:#0a1128;padding:12px;border-radius:8px;margin:12px 0;text-align:center}
+.escrow-note{font-size:.82rem;color:#ffcc00;background:rgba(255,204,0,.1);padding:10px;border-radius:6px}
